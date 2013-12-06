@@ -6,7 +6,7 @@
 	<string>Downloads the latest version of Skitch and makes a pkg of it
 </string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.SheaCraigRecipes.pkg.Skitch</string>
+    <string>com.github.sheagcraig.sheagcraig-recipes.pkg.Skitch</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -17,7 +17,7 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.SheaCraigRecipes.download.Skitch</string>
+	<string>com.github.sheagcraig.sheagcraig-recipes.download.Skitch</string>
     <key>Process</key>
     <array>
         <dict>
