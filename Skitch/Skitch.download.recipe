@@ -3,17 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Evernote
-
-Alternate Beta URL that can be used for SPARKLE_FEED_URL:
-http://update.evernote.com/prerelease/ENMac/EvernoteMacUpdate.xml
-</string>
+    <string>Downloads the current release version of Skitch</string>
     <key>Identifier</key>
-    <string>com.github.autopkg.download.Evernote</string>
+    <string>com.github.sheagcraig.SheaCraigRecipes.download.Skitch</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Evernote</string>
+        <string>Skitch</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -26,6 +22,8 @@ http://update.evernote.com/prerelease/ENMac/EvernoteMacUpdate.xml
             <dict>
                 <key>url</key>
                 <string>http://evernote.com/download/get.php?file=SkitchMac</string>
+				<key>filename</key>
+				<string>Skitch.zip</string>
             </dict>
         </dict>
         <dict>

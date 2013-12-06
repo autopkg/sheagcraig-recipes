@@ -3,21 +3,21 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-	<string>Downloads the latest version of Evernote and makes a pkg of it
+	<string>Downloads the latest version of Skitch and makes a pkg of it
 </string>
     <key>Identifier</key>
-    <string>com.github.autopkg.pkg.Evernote</string>
+    <string>com.github.sheagcraig.SheaCraigRecipes.pkg.Skitch</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Evernote</string>
+        <string>Skitch</string>
 		<key>PKG_ID</key>
-		<string>com.evernote.Evernote</string>
+		<string>com.skitch.skitch</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-	<string>com.github.autopkg.download.Evernote</string>
+	<string>com.github.sheagcraig.SheaCraigRecipes.download.Skitch</string>
     <key>Process</key>
     <array>
         <dict>
@@ -49,11 +49,11 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>AppVersioner</string>
+            <string>AppInfo</string>
             <key>Arguments</key>
             <dict>
                 <key>app_path</key>
-                <string>%pkgroot%/Applications/Evernote.app</string>
+                <string>%pkgroot%/Applications/Skitch.app</string>
             </dict>
         </dict>
         <dict>
