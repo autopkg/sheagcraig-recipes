@@ -15,7 +15,7 @@
 		<string>com.jinchess.Jin</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.0</string>
+    <string>0.2.5</string>
     <key>ParentRecipe</key>
 	<string>com.github.sheagcraig.sheagcraig-recipes.download.Jin</string>
     <key>Process</key>
