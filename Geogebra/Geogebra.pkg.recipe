@@ -3,21 +3,19 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-	<string>Downloads the latest version of Skitch and makes a pkg of it
+	<string>Downloads the latest version of GeoGebra and makes a pkg of it
 </string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.pkg.Skitch</string>
+    <string>com.github.sheagcraig.sheagcraig-recipes.pkg.Geogebra</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>Skitch</string>
-		<key>PKG_ID</key>
-		<string>com.skitch.skitch</string>
+        <string>Geogebra</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.5</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.sheagcraig-recipes.download.Skitch</string>
+	<string>com.github.sheagcraig.sheagcraig-recipes.download.Geogebra</string>
     <key>Process</key>
     <array>
         <dict>
@@ -53,7 +51,7 @@
             <key>Arguments</key>
             <dict>
                 <key>info_path</key>
-                <string>%pkgroot%/Applications/Skitch.app</string>
+                <string>%pkgroot%/Applications/GeoGebra.app</string>
 				<key>plist_keys</key>
 				<dict>
 					<key>CFBundleShortVersionString</key>
@@ -77,7 +75,7 @@
                     <key>pkgdir</key>
                     <string>%RECIPE_CACHE_DIR%</string>
                     <key>id</key>
-                    <string>%PKG_ID%</string>
+                    <string>%bundleid%</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
