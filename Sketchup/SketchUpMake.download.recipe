@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Skitch</string>
+    <string>Downloads the current release version of SketchUpMEN</string>
     <key>Identifier</key>
     <string>com.github.sheagcraig.sheagcraig-recipes.download.SketchUpMake</string>
     <key>Input</key>
