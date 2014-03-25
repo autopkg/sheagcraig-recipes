@@ -21,7 +21,7 @@
             <key>description</key>
             <string>SketchUp is 3D modeling software that's easy to learn and incredibly fun to use.</string>
             <key>display_name</key>
-            <string>SketchUpMake</string>
+            <string>%NAME%</string>
             <key>name</key>
             <string>%NAME%</string>
             <key>unattended_install</key>
