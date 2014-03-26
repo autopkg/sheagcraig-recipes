@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Skitch</string>
+    <string>Downloads the current release version of SketchUpMEN</string>
     <key>Identifier</key>
     <string>com.github.sheagcraig.sheagcraig-recipes.download.SketchUpMake</string>
     <key>Input</key>
@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://dl.trimble.com/sketchup/SketchUpMEN.dmg</string>
+                <string>http://dl.trimble.com/sketchup/SketchUpMake-en.dmg</string>
             </dict>
         </dict>
         <dict>
