@@ -6,7 +6,7 @@
 	<string>Downloads the latest version of SketchUpMake and makes a pkg of it
 </string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.pkg.SketchUpMake</string>
+    <string>com.github.sheagcraig.pkg.SketchUpMake</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -17,7 +17,7 @@
     <key>MinimumVersion</key>
     <string>0.2.5</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.sheagcraig-recipes.download.SketchUpMake</string>
+	<string>com.github.sheagcraig.download.SketchUpMake</string>
     <key>Process</key>
     <array>
         <dict>

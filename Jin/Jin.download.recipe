@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of Jin</string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.download.Jin</string>
+    <string>com.github.sheagcraig.download.Jin</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>

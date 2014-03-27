@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of Geogebra</string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.download.Geogebra</string>
+    <string>com.github.sheagcraig.download.Geogebra</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>

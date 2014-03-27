@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of AirServer</string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.download.AirServer</string>
+    <string>com.github.sheagcraig.download.AirServer</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>

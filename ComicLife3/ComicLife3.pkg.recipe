@@ -6,7 +6,7 @@
 	<string>Downloads the latest version of Comic Life 3 and makes a pkg of it. Make sure to either override the LICENSE file variable or to have yours in place on the build machine.
 </string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.pkg.ComicLife3</string>
+    <string>com.github.sheagcraig.pkg.ComicLife3</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -17,7 +17,7 @@
     <key>MinimumVersion</key>
     <string>0.2.5</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.sheagcraig-recipes.download.ComicLife3</string>
+	<string>com.github.sheagcraig.download.ComicLife3</string>
     <key>Process</key>
     <array>
         <dict>

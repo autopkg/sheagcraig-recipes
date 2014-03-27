@@ -6,7 +6,7 @@
 	<string>Downloads the latest version of AirServer and makes a pkg of it
 </string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.pkg.AirServer</string>
+    <string>com.github.sheagcraig.pkg.AirServer</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -19,7 +19,7 @@
     <key>MinimumVersion</key>
     <string>0.2.8</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.sheagcraig-recipes.download.AirServer</string>
+	<string>com.github.sheagcraig.download.AirServer</string>
     <key>Process</key>
     <array>
         <dict>

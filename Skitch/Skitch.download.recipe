@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Downloads the current release version of Skitch</string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.download.Skitch</string>
+    <string>com.github.sheagcraig.download.Skitch</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>

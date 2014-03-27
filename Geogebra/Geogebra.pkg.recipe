@@ -6,7 +6,7 @@
 	<string>Downloads the latest version of GeoGebra and makes a pkg of it
 </string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.sheagcraig-recipes.pkg.Geogebra</string>
+    <string>com.github.sheagcraig.pkg.Geogebra</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
@@ -15,7 +15,7 @@
     <key>MinimumVersion</key>
     <string>0.2.5</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.sheagcraig-recipes.download.Geogebra</string>
+	<string>com.github.sheagcraig.download.Geogebra</string>
     <key>Process</key>
     <array>
         <dict>
