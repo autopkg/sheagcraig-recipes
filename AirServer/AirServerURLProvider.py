@@ -20,13 +20,12 @@ import urllib2
 from autopkglib import Processor, ProcessorError
 
 
-__all__ = ["AirServerURLProvider"] 
+__all__ = ["AirServerURLProvider"]
 
 
-BASE_URL = "http://www.airserver.com/Download/Mac"
-
-# REFERENCE       <a target="_blank" href="http://dl.airserver.com/mac/AirServer-5.0.4.0.dmg">AirServer 5.0.4</a>
-re_dmg_link = re.compile(r'href="(?P<url>http://.*/AirServer-[\d.]+.dmg)">AirServer [\d.]+')
+BASE_URL = "http://www.airserver.com/Download/MacPC"
+# REFERENCE <a class="button download" href="http://dl.airserver.com/mac/AirServer-5.0.6.dmg"><i class="icon-download-cloud"></i> Download for Mac</a>
+re_dmg_link = re.compile(r'href="(?P<url>http://dl.airserver.com/mac/AirServer-[\d.]+.dmg)"')
 
 
 class AirServerURLProvider(Processor):
@@ -52,15 +51,15 @@ class AirServerURLProvider(Processor):
             f.close()
         except BaseException as err:
             raise ProcessorError("Can't download %s: %s" % (base_url, err))
-        
+
         m = re_dmg_link.search(html)
-            
+
         if not m:
             raise ProcessorError(
                 "Couldn't find AirServer download URL in %s" % base_url)
-        
+
         return urllib2.quote(m.group("url"), safe=":/%")
-        
+
 
     def main(self):
         """Find and return a download URL"""
