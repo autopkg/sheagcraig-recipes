@@ -94,6 +94,12 @@
                     <string>0755</string>
 					<key>Library/Python/2.7/site-packages/jss</key>
                     <string>0755</string>
+					<key>usr</key>
+                    <string>0755</string>
+					<key>usr/share</key>
+                    <string>0755</string>
+					<key>usr/share/jss-autopkg-addon</key>
+                    <string>0755</string>
                 </dict>
             </dict>
         </dict>
@@ -123,6 +129,36 @@
                 <string>%jss_autopkg_addon_path%/jss</string>
                 <key>destination_path</key>
 				<string>%pkgroot%/Library/Python/2.7/site-packages/jss</string>
+                <key>overwrite</key>
+                <true/>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Comment</key>
+            <string>Copy example templates to documentation folder</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%jss_autopkg_addon_path%/example_templates</string>
+                <key>destination_path</key>
+				<string>%pkgroot%/usr/share/jss-autopkg-addon/</string>
+                <key>overwrite</key>
+                <true/>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Comment</key>
+            <string>Copy README to documentation folder</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%jss_autopkg_addon_path%/README.md</string>
+                <key>destination_path</key>
+				<string>%pkgroot%/usr/share/jss-autopkg-addon/README.md</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
