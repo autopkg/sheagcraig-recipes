@@ -24,8 +24,6 @@
                 <string>%USERNAME%</string>
                 <key>password</key>
                 <string>%PASSWORD%</string>
-				<key>type</key>
-				<string>development</string>
             </dict>
             <key>Processor</key>
             <string>MinecraftEduURLProvider</string>
