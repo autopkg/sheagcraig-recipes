@@ -10,8 +10,10 @@
     <dict>
         <key>NAME</key>
         <string>jss-autopkg-addon</string>
-        <key>URL</key>
+        <key>JSSIMPORTER_URL</key>
         <string>https://github.com/sheagcraig/jss-autopkg-addon/zipball/master</string>
+        <key>PYTHON_JSS_URL</key>
+        <string>https://github.com/sheagcraig/python-jss/zipball/master</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.5</string>
@@ -25,14 +27,10 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>%URL%</string>
+                <string>%JSSIMPORTER_URL%</string>
                 <key>filename</key>
                 <string>%NAME%.zip</string>
             </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>EndOfCheckPhase</string>
         </dict>
         <dict>
             <key>Processor</key>
@@ -55,6 +53,45 @@
                 <key>input_path</key>
                 <string>%destination_path%</string>
             </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Comment</key>
+            <string>Download latest python-jss zip archive</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%PYTHON_JSS_URL%</string>
+                <key>filename</key>
+                <string>python-jss.zip</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>archive_path</key>
+                <string>%pathname%</string>
+                <key>destination_path</key>
+                <string>%RECIPE_CACHE_DIR%/python-jss-source</string>
+                <key>purge_destination</key>
+                <true/>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PythonJSSSourceFinder</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_path</key>
+                <string>%destination_path%</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
         </dict>
         <dict>
             <key>Processor</key>
@@ -126,7 +163,7 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-                <string>%jss_autopkg_addon_path%/jss</string>
+                <string>%python_jss_path%/jss</string>
                 <key>destination_path</key>
 				<string>%pkgroot%/Library/Python/2.7/site-packages/jss</string>
                 <key>overwrite</key>
