@@ -209,6 +209,24 @@
                             <key>group</key>
                             <string>wheel</string>
                         </dict>
+                        <dict>
+                            <key>path</key>
+							<string>Library/AutoPkg/autopkglib/JSSImporter.py</string>
+                            <key>user</key>
+                            <string>root</string>
+                            <key>group</key>
+                            <string>wheel</string>
+                            <key>mode</key>
+                            <string>0755</string>
+                        </dict>
+                        <dict>
+                            <key>path</key>
+							<string>usr</string>
+                            <key>user</key>
+                            <string>root</string>
+                            <key>group</key>
+                            <string>wheel</string>
+                        </dict>
                     </array>
                 </dict>
             </dict>
