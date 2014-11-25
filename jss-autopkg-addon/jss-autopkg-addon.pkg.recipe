@@ -12,8 +12,6 @@
         <string>jss-autopkg-addon</string>
         <key>JSSIMPORTER_URL</key>
         <string>https://github.com/sheagcraig/jss-autopkg-addon/zipball/master</string>
-        <key>PYTHON_JSS_URL</key>
-        <string>https://github.com/sheagcraig/python-jss/zipball/master</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.5</string>
@@ -56,41 +54,6 @@
         </dict>
         <dict>
             <key>Processor</key>
-            <string>URLDownloader</string>
-            <key>Comment</key>
-            <string>Download latest python-jss zip archive</string>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%PYTHON_JSS_URL%</string>
-                <key>filename</key>
-                <string>python-jss.zip</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Unarchiver</string>
-            <key>Arguments</key>
-            <dict>
-                <key>archive_path</key>
-                <string>%pathname%</string>
-                <key>destination_path</key>
-                <string>%RECIPE_CACHE_DIR%/python-jss-source</string>
-                <key>purge_destination</key>
-                <true/>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>PythonJSSSourceFinder</string>
-            <key>Arguments</key>
-            <dict>
-                <key>input_path</key>
-                <string>%destination_path%</string>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
             <string>EndOfCheckPhase</string>
         </dict>
         <dict>
@@ -123,14 +86,6 @@
                     <string>0755</string>
                     <key>Library/AutoPkg/autopkglib</key>
                     <string>0755</string>
-                    <key>Library/Python</key>
-                    <string>0755</string>
-					<key>Library/Python/2.7</key>
-                    <string>0755</string>
-					<key>Library/Python/2.7/site-packages</key>
-                    <string>0755</string>
-					<key>Library/Python/2.7/site-packages/jss</key>
-                    <string>0755</string>
 					<key>usr</key>
                     <string>0755</string>
 					<key>usr/share</key>
@@ -151,21 +106,6 @@
                 <string>%jss_autopkg_addon_path%/JSSImporter.py</string>
                 <key>destination_path</key>
                 <string>%pkgroot%/Library/AutoPkg/autopkglib/JSSImporter.py</string>
-                <key>overwrite</key>
-                <true/>
-            </dict>
-        </dict>
-        <dict>
-            <key>Processor</key>
-            <string>Copier</string>
-            <key>Comment</key>
-            <string>Copy python-jss to system python site-packages</string>
-            <key>Arguments</key>
-            <dict>
-                <key>source_path</key>
-                <string>%python_jss_path%/jss</string>
-                <key>destination_path</key>
-				<string>%pkgroot%/Library/Python/2.7/site-packages/jss</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
@@ -236,6 +176,8 @@
                     <string>%RECIPE_CACHE_DIR%/PackageInfo</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
+					<key>scripts</key>
+					<string>%RECIPE_DIR%/scripts</string>
                     <key>chown</key>
                     <array>
                         <dict>
