@@ -1,10 +1,6 @@
 #!/bin/bash
 
-easy_install -U python-jss
+PYTHON_JSS="/usr/share/python_jss*.egg"
 
-if [[ ! $? == 0 ]]; then
-	echo "There was an error downloading and installing python-jss, a required dependency for jss-autopkg-addon. Please ensure you have an active connection to the information superhighway and try again."
-	exit 1
-else
-	exit 0
-fi
+easy_install -U $PYTHON_JSS
+rm $PYTHON_JSS

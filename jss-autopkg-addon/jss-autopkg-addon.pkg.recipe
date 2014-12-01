@@ -12,11 +12,40 @@
         <string>jss-autopkg-addon</string>
         <key>JSSIMPORTER_URL</key>
         <string>https://github.com/sheagcraig/jss-autopkg-addon/zipball/master</string>
+        <key>PYTHON_JSS_URL</key>
+		<string>https://pypi.python.org/pypi/python-jss</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.5</string>
+    <string>0.2.9</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Comment</key>
+            <string>Find the latest python-jss egg.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%PYTHON_JSS_URL%</string>
+                <key>re_pattern</key>
+				<string>https.*?\.egg</string>
+				<!--Example line: <a href="https://pypi.python.org/packages/2.7/p/python-jss/python_jss-0.4.2-py2.7.egg#md5=45113a1f7604b43b08ec3b74b918e312">python_jss-0.4.2-py2.7.egg</a> -->
+				<key>result_output_var_name</key>
+				<string>latest_python_jss</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Comment</key>
+            <string>Download latest python-jss to site-packages for postinstall script easy_install.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+                <string>%latest_python_jss%</string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
@@ -93,6 +122,19 @@
 					<key>usr/share/jss-autopkg-addon</key>
                     <string>0755</string>
                 </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Comment</key>
+            <string>Copy python-jss to package site-packages.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/python_jss*.egg</string>
+                <key>destination_path</key>
+				<string>%pkgroot%/usr/share/</string>
             </dict>
         </dict>
         <dict>
