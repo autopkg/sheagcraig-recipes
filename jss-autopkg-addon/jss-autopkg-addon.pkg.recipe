@@ -252,6 +252,30 @@
                 </dict>
             </dict>
         </dict>
+        <dict>
+            <key>Processor</key>
+            <string>FileFinder</string>
+            <key>Comment</key>
+            <string>Find the egg filename for deletion.</string>
+            <key>Arguments</key>
+            <dict>
+				<key>pattern</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/python_jss*.egg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>PathDeleter</string>
+            <key>Comment</key>
+            <string>Remove the python-jss egg so it doesn't glob into the next update.</string>
+            <key>Arguments</key>
+            <dict>
+				<key>path_list</key>
+				<array>
+					<string>%found_filename%</string>
+				</array>
+            </dict>
+        </dict>
     </array>
 </dict>
 </plist>
