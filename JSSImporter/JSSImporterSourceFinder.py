@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 #
-# Copyright 2013 Greg Neagle
+# Copyright 2014 Shea G. Craig
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -21,12 +21,12 @@ import glob
 from autopkglib import Processor, ProcessorError
 
 
-__all__ = ["JSSAutoPkgAddonSourceFinder"]
+__all__ = ["JSSImporterSourceFinder"]
 
 
 
-class JSSAutoPkgAddonSourceFinder(Processor):
-    """Finds the root sheagcraig-jss-autopkg-addon-foo folder from the expanded
+class JSSImporterSourceFinder(Processor):
+    """Finds the root sheagcraig-jssimporter-foo folder from the expanded
     autopkg zip archive.
 
     """
@@ -37,8 +37,8 @@ class JSSAutoPkgAddonSourceFinder(Processor):
         },
     }
     output_variables = {
-        "jss_autopkg_addon_path": {
-            "description": "Root path of expanded jss-addon archive.",
+        "jssimporter_path": {
+            "description": "Root path of expanded jssimporter archive.",
         },
     }
     description = __doc__
@@ -56,14 +56,14 @@ class JSSAutoPkgAddonSourceFinder(Processor):
         root_dir = self.env["input_path"]
         try:
             autopkg_dir = self.find_match(root_dir,
-                                          'sheagcraig-jss-autopkg-addon-*')
-            self.env["jss_autopkg_addon_path"] = os.path.join(root_dir,
+                                          'sheagcraig-JSSImporter-*')
+            self.env["jssimporter_path"] = os.path.join(root_dir,
                                                               autopkg_dir)
-            self.output("Found %s" % self.env["jss_autopkg_addon_path"])
+            self.output("Found %s" % self.env["jssimporter_path"])
         except BaseException as err:
             raise ProcessorError(err)
 
 
 if __name__ == "__main__":
-    processor = JSSAutoPkgAddonSourceFinder()
+    processor = JSSImporterSourceFinder()
     processor.execute_shell()
