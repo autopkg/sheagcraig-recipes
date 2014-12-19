@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of NetHack.</string>
+    <key>Identifier</key>
+    <string>com.github.sheagcraig.download.NetHack</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>NetHack</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.0</string>
+    <key>Process</key>
+    <array>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+				<key>url</key>
+				<string>http://sourceforge.net/projects/nethack/files/nethack/</string>
+				<key>re_pattern</key>
+				<string>/projects/nethack/files/nethack/([0-9.]{5}/)</string>
+				<key>result_output_var_name</key>
+				<string>version_match</string>
+			</dict>
+		</dict>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+				<key>url</key>
+				<string>http://sourceforge.net/projects/nethack/files/nethack/%version_match%</string>
+				<key>re_pattern</key>
+				<string>http://sourceforge.net/projects/nethack/files/nethack/[0-9.]{5}/NetHack-[0-9]+-Lion-mac-Term.*dmg/download</string>
+				<!-- Example http://sourceforge.net/projects/nethack/files/nethack/3.4.3/NetHack-343-Lion-mac-Term-1.dmg/download -->
+				<key>result_output_var_name</key>
+				<string>dl_match</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+				<string>%dl_match%</string>
+				<key>filename</key>
+				<string>NetHack.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
