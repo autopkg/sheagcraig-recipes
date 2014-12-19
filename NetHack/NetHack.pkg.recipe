@@ -12,7 +12,7 @@
         <string>NetHack</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.5</string>
+    <string>0.2.9</string>
     <key>ParentRecipe</key>
 	<string>com.github.sheagcraig.download.NetHack</string>
     <key>Process</key>
