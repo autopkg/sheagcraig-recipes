@@ -1,0 +1,3 @@
+Cowsay is kind of unsupported, so this recipe will probably only ever run once.
+
+The recipe bypasses the install script and just packages them. This requires some fooling around in the perl file to set the install prefixes and whatnot.

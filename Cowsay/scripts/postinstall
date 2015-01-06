@@ -1,0 +1,14 @@
+#!/bin/bash
+
+PYTHON_JSS="/usr/share/python_jss*.egg"
+
+# Install the one that we brought with us:
+easy_install -UZ $PYTHON_JSS
+# Clean up after ourselves.
+rm $PYTHON_JSS
+
+# Now try to see if there's an updated version
+easy_install -UZ python-jss
+
+# Even if it fails, exit 0 so the package installer doesn't complain
+exit 0
