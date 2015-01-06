@@ -40,6 +40,10 @@
                     <string>0755</string>
 					<key>usr/local/share/cows</key>
                     <string>0755</string>
+					<key>usr/local/share/man</key>
+                    <string>0755</string>
+					<key>usr/local/share/man/man1</key>
+                    <string>0755</string>
                 </dict>
             </dict>
         </dict>
@@ -86,6 +90,21 @@
                 <string>%RECIPE_CACHE_DIR%/PackageInfo</string>
                 <key>pkgtype</key>
                 <string>flat</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Comment</key>
+            <string>Copy manfile.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+                <string>%cowsay_path%/cowsay.1</string>
+                <key>destination_path</key>
+				<string>%pkgroot%/usr/local/share/man/man1/cowsay.1</string>
+                <key>overwrite</key>
+                <true/>
             </dict>
         </dict>
         <dict>
