@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+	<string>Downloads the latest version of Adobe DNG Converter and makes a pkg of it.</string>
+    <key>Identifier</key>
+    <string>com.github.sheagcraig.pkg.AdobeDNGConverter</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>AdobeDNGConverter</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.9</string>
+    <key>ParentRecipe</key>
+	<string>com.github.sheagcraig.download.AdobeDNGConverter</string>
+    <key>Process</key>
+    <array>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Comment</key>
+            <string>Copy the enclosed pkg from the dmg so we can work on it.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+				<string>%pathname%/*.pkg</string>
+                <key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.pkg</string>
+				<key>overwrite</key>
+				<true/>
+            </dict>
+        </dict>
+		<dict>
+			<key>Processor</key>
+			<string>FlatPkgUnpacker</string>
+            <key>Comment</key>
+            <string>We need the version number. Unpack the flat pkg...</string>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpacked/</string>
+				<key>flat_pkg_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.pkg</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>Processor</key>
+			<string>PkgPayloadUnpacker</string>
+            <key>Comment</key>
+            <string>Surprise! There's a bundle-style package inside. Let's unpack that now.</string>
+			<key>Arguments</key>
+			<dict>
+				<key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpacked/</string>
+				<key>pkg_payload_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpacked/DNGConverter.pkg/Payload</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>Versioner</string>
+            <key>Comment</key>
+            <string>Grab the version. Unfortunately, CFBundleVersion is the least garbaged version, but it still has letters in it.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>input_plist_path</key>
+				<string>%RECIPE_CACHE_DIR%/unpacked/Adobe DNG Converter.app/Contents/Info.plist</string>
+                <key>plist_version_key</key>
+				<string>CFBundleVersion</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>Copier</string>
+            <key>Comment</key>
+            <string>Finally: Copy and rename the package that Adobe gave us.</string>
+            <key>Arguments</key>
+            <dict>
+                <key>source_path</key>
+				<string>%RECIPE_CACHE_DIR%/downloads/%NAME%.pkg</string>
+                <key>destination_path</key>
+				<string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+            </dict>
+        </dict>
+    </array>
+</dict>
+</plist>

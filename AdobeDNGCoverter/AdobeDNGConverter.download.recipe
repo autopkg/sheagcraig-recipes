@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Description</key>
+    <string>Downloads the current release version of Adobe DNG Converter.</string>
+    <key>Identifier</key>
+    <string>com.github.sheagcraig.download.AdobeDNGConverter</string>
+    <key>Input</key>
+    <dict>
+        <key>NAME</key>
+        <string>AdobeDNGConverter</string>
+    </dict>
+    <key>MinimumVersion</key>
+    <string>0.2.9</string>
+    <key>Process</key>
+    <array>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+				<key>url</key>
+				<string>http://www.adobe.com/go/dng_converter_mac/</string>
+				<key>re_pattern</key>
+				<string>(?P&lt;part1&gt;thankyou.jsp\?ftpID=[0-9]+?)&amp;amp;(?P&lt;part2&gt;fileID=[0-9]+)</string>
+				<!-- Example: 
+				    <td><a class="submit xwide" href="thankyou.jsp?ftpID=5858&amp;fileID=5904">Proceed to Download</a></td>
+				-->
+			</dict>
+		</dict>
+		<dict>
+            <key>Processor</key>
+            <string>URLTextSearcher</string>
+            <key>Arguments</key>
+            <dict>
+				<key>url</key>
+				<string>http://www.adobe.com/support/downloads/%part1%&amp;%part2%</string>
+				<key>re_pattern</key>
+				<string>http://download.adobe.com/pub/adobe/dng/mac/DNGConverter[0-9_]+\.dmg</string>
+				<!-- Example 
+                <a class="submit wide" href="http://download.adobe.com/pub/adobe/dng/mac/DNGConverter_8_7_1.dmg">Download Now</a></td>
+				-->
+				<key>result_output_var_name</key>
+				<string>dl_match</string>
+			</dict>
+		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>URLDownloader</string>
+            <key>Arguments</key>
+            <dict>
+                <key>url</key>
+				<string>%dl_match%</string>
+				<key>filename</key>
+				<string>DNGConverter.dmg</string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
+            <string>EndOfCheckPhase</string>
+        </dict>
+    </array>
+</dict>
+</plist>
