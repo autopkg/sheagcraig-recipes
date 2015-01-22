@@ -13,7 +13,7 @@
         <key>JSSIMPORTER_URL</key>
         <string>https://github.com/sheagcraig/JSSImporter/zipball/master</string>
         <key>PYTHON_JSS_URL</key>
-		<string>https://pypi.python.org/pypi/python-jss</string>
+        <string>https://pypi.python.org/pypi/python-jss</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
@@ -29,10 +29,10 @@
                 <key>url</key>
                 <string>%PYTHON_JSS_URL%</string>
                 <key>re_pattern</key>
-				<string>https.*?\.egg</string>
-				<!--Example line: <a href="https://pypi.python.org/packages/2.7/p/python-jss/python_jss-0.4.2-py2.7.egg#md5=45113a1f7604b43b08ec3b74b918e312">python_jss-0.4.2-py2.7.egg</a> -->
-				<key>result_output_var_name</key>
-				<string>latest_python_jss</string>
+                <string>https.*?\.egg</string>
+                <!--Example line: <a href="https://pypi.python.org/packages/2.7/p/python-jss/python_jss-0.4.2-py2.7.egg#md5=45113a1f7604b43b08ec3b74b918e312">python_jss-0.4.2-py2.7.egg</a> -->
+                <key>result_output_var_name</key>
+                <string>latest_python_jss</string>
             </dict>
         </dict>
         <dict>
@@ -115,11 +115,11 @@
                     <string>0755</string>
                     <key>Library/AutoPkg/autopkglib</key>
                     <string>0755</string>
-					<key>usr</key>
+                    <key>usr</key>
                     <string>0755</string>
-					<key>usr/share</key>
+                    <key>usr/share</key>
                     <string>0755</string>
-					<key>usr/share/jssimporter</key>
+                    <key>usr/share/jssimporter</key>
                     <string>0755</string>
                 </dict>
             </dict>
@@ -132,9 +132,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/python_jss*.egg</string>
+                <string>%RECIPE_CACHE_DIR%/downloads/python_jss*.egg</string>
                 <key>destination_path</key>
-				<string>%pkgroot%/usr/share/</string>
+                <string>%pkgroot%/usr/share/</string>
             </dict>
         </dict>
         <dict>
@@ -162,7 +162,7 @@
                 <key>source_path</key>
                 <string>%jssimporter_path%/example_templates</string>
                 <key>destination_path</key>
-				<string>%pkgroot%/usr/share/jssimporter/</string>
+                <string>%pkgroot%/usr/share/jssimporter/</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
@@ -177,7 +177,7 @@
                 <key>source_path</key>
                 <string>%jssimporter_path%/README.md</string>
                 <key>destination_path</key>
-				<string>%pkgroot%/usr/share/jssimporter/README.md</string>
+                <string>%pkgroot%/usr/share/jssimporter/README.md</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
@@ -218,8 +218,8 @@
                     <string>%RECIPE_CACHE_DIR%/PackageInfo</string>
                     <key>options</key>
                     <string>purge_ds_store</string>
-					<key>scripts</key>
-					<string>%RECIPE_DIR%/scripts</string>
+                    <key>scripts</key>
+                    <string>%RECIPE_DIR%/scripts</string>
                     <key>chown</key>
                     <array>
                         <dict>
@@ -232,7 +232,7 @@
                         </dict>
                         <dict>
                             <key>path</key>
-							<string>Library/AutoPkg/autopkglib/JSSImporter.py</string>
+                            <string>Library/AutoPkg/autopkglib/JSSImporter.py</string>
                             <key>user</key>
                             <string>root</string>
                             <key>group</key>
@@ -242,7 +242,7 @@
                         </dict>
                         <dict>
                             <key>path</key>
-							<string>usr</string>
+                            <string>usr</string>
                             <key>user</key>
                             <string>root</string>
                             <key>group</key>
@@ -259,8 +259,8 @@
             <string>Find the egg filename for deletion.</string>
             <key>Arguments</key>
             <dict>
-				<key>pattern</key>
-				<string>%RECIPE_CACHE_DIR%/downloads/python_jss*.egg</string>
+                <key>pattern</key>
+                <string>%RECIPE_CACHE_DIR%/downloads/python_jss*.egg</string>
             </dict>
         </dict>
         <dict>
@@ -270,10 +270,10 @@
             <string>Remove the python-jss egg so it doesn't glob into the next update.</string>
             <key>Arguments</key>
             <dict>
-				<key>path_list</key>
-				<array>
-					<string>%found_filename%</string>
-				</array>
+                <key>path_list</key>
+                <array>
+                    <string>%found_filename%</string>
+                </array>
             </dict>
         </dict>
     </array>

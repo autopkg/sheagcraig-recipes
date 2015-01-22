@@ -32,17 +32,17 @@
                 <dict>
                     <key>usr</key>
                     <string>0755</string>
-					<key>usr/local</key>
+                    <key>usr/local</key>
                     <string>0755</string>
-					<key>usr/local/bin</key>
+                    <key>usr/local/bin</key>
                     <string>0755</string>
-					<key>usr/local/share</key>
+                    <key>usr/local/share</key>
                     <string>0755</string>
-					<key>usr/local/share/cows</key>
+                    <key>usr/local/share/cows</key>
                     <string>0755</string>
-					<key>usr/local/share/man</key>
+                    <key>usr/local/share/man</key>
                     <string>0755</string>
-					<key>usr/local/share/man/man1</key>
+                    <key>usr/local/share/man/man1</key>
                     <string>0755</string>
                 </dict>
             </dict>
@@ -55,9 +55,9 @@
             <key>Arguments</key>
             <dict>
                 <key>source_path</key>
-				<string>%cowsay_path%/cowsay</string>
+                <string>%cowsay_path%/cowsay</string>
                 <key>destination_path</key>
-				<string>%pkgroot%/usr/local/bin</string>
+                <string>%pkgroot%/usr/local/bin</string>
             </dict>
         </dict>
         <dict>
@@ -70,7 +70,7 @@
                 <key>source_path</key>
                 <string>%cowsay_path%/cows</string>
                 <key>destination_path</key>
-				<string>%pkgroot%/usr/local/share/cows</string>
+                <string>%pkgroot%/usr/local/share/cows</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
@@ -102,7 +102,7 @@
                 <key>source_path</key>
                 <string>%cowsay_path%/cowsay.1</string>
                 <key>destination_path</key>
-				<string>%pkgroot%/usr/local/share/man/man1/cowsay.1</string>
+                <string>%pkgroot%/usr/local/share/man/man1/cowsay.1</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
@@ -127,10 +127,10 @@
                     <key>options</key>
                     <string>purge_ds_store</string>
                     <key>chown</key>
-					<array>
+                    <array>
                         <dict>
                             <key>path</key>
-							<string>usr</string>
+                            <string>usr</string>
                             <key>user</key>
                             <string>root</string>
                             <key>group</key>

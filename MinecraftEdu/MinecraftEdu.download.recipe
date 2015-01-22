@@ -27,7 +27,7 @@
             </dict>
             <key>Processor</key>
             <string>MinecraftEduURLProvider</string>
-		</dict>
+        </dict>
         <dict>
             <key>Arguments</key>
             <dict>

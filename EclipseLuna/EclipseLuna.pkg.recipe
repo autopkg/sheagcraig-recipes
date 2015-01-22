@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-	<string>Downloads the latest version of Eclipse Luna and makes a pkg of it.</string>
+    <string>Downloads the latest version of Eclipse Luna and makes a pkg of it.</string>
     <key>Identifier</key>
     <string>com.github.sheagcraig.pkg.EclipseLuna</string>
     <key>Input</key>
@@ -14,7 +14,7 @@
     <key>MinimumVersion</key>
     <string>0.2.8</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.download.EclipseLuna</string>
+    <string>com.github.sheagcraig.download.EclipseLuna</string>
     <key>Process</key>
     <array>
         <dict>
@@ -31,31 +31,31 @@
                 </dict>
             </dict>
         </dict>
-		<dict>
-			<key>Processor</key>
-			<string>Unarchiver</string>
-			<key>Arguments</key>
-			<dict>
-				<key>purge_destination</key>
-				<true/>
-				<key>destination_path</key>
-				<string>%pkgroot%/Applications</string>
-			</dict>
-		</dict>
+        <dict>
+            <key>Processor</key>
+            <string>Unarchiver</string>
+            <key>Arguments</key>
+            <dict>
+                <key>purge_destination</key>
+                <true/>
+                <key>destination_path</key>
+                <string>%pkgroot%/Applications</string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>PlistReader</string>
             <key>Arguments</key>
             <dict>
                 <key>info_path</key>
-				<string>%pkgroot%/Applications/eclipse/Eclipse.app</string>
-				<key>plist_keys</key>
-				<dict>
-					<key>CFBundleShortVersionString</key>
-					<string>version</string>
-					<key>CFBundleIdentifier</key>
-					<string>PKG_ID</string>
-				</dict>
+                <string>%pkgroot%/Applications/eclipse/Eclipse.app</string>
+                <key>plist_keys</key>
+                <dict>
+                    <key>CFBundleShortVersionString</key>
+                    <string>version</string>
+                    <key>CFBundleIdentifier</key>
+                    <string>PKG_ID</string>
+                </dict>
             </dict>
         </dict>
         <dict>

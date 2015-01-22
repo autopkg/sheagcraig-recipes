@@ -22,8 +22,8 @@
             <dict>
                 <key>url</key>
                 <string>http://evernote.com/download/get.php?file=SkitchMac</string>
-				<key>filename</key>
-				<string>Skitch.zip</string>
+                <key>filename</key>
+                <string>Skitch.zip</string>
             </dict>
         </dict>
         <dict>

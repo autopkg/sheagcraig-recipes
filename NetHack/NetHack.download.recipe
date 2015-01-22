@@ -15,42 +15,42 @@
     <string>0.2.9</string>
     <key>Process</key>
     <array>
-		<dict>
+        <dict>
             <key>Processor</key>
             <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
-				<key>url</key>
-				<string>http://sourceforge.net/projects/nethack/files/nethack/</string>
-				<key>re_pattern</key>
-				<string>/projects/nethack/files/nethack/([0-9.]{5}/)</string>
-				<key>result_output_var_name</key>
-				<string>version_match</string>
-			</dict>
-		</dict>
-		<dict>
+                <key>url</key>
+                <string>http://sourceforge.net/projects/nethack/files/nethack/</string>
+                <key>re_pattern</key>
+                <string>/projects/nethack/files/nethack/([0-9.]{5}/)</string>
+                <key>result_output_var_name</key>
+                <string>version_match</string>
+            </dict>
+        </dict>
+        <dict>
             <key>Processor</key>
             <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
-				<key>url</key>
-				<string>http://sourceforge.net/projects/nethack/files/nethack/%version_match%</string>
-				<key>re_pattern</key>
-				<string>http://sourceforge.net/projects/nethack/files/nethack/[0-9.]{5}/NetHack-[0-9]+-Lion-mac-Term.*dmg/download</string>
-				<!-- Example http://sourceforge.net/projects/nethack/files/nethack/3.4.3/NetHack-343-Lion-mac-Term-1.dmg/download -->
-				<key>result_output_var_name</key>
-				<string>dl_match</string>
-			</dict>
-		</dict>
+                <key>url</key>
+                <string>http://sourceforge.net/projects/nethack/files/nethack/%version_match%</string>
+                <key>re_pattern</key>
+                <string>http://sourceforge.net/projects/nethack/files/nethack/[0-9.]{5}/NetHack-[0-9]+-Lion-mac-Term.*dmg/download</string>
+                <!-- Example http://sourceforge.net/projects/nethack/files/nethack/3.4.3/NetHack-343-Lion-mac-Term-1.dmg/download -->
+                <key>result_output_var_name</key>
+                <string>dl_match</string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-				<string>%dl_match%</string>
-				<key>filename</key>
-				<string>NetHack.dmg</string>
+                <string>%dl_match%</string>
+                <key>filename</key>
+                <string>NetHack.dmg</string>
             </dict>
         </dict>
         <dict>

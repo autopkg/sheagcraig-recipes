@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-	<string>Downloads the latest version of Comic Life 3 and makes a pkg of it. Make sure to either override the LICENSE file variable or to have yours in place on the build machine.
+    <string>Downloads the latest version of Comic Life 3 and makes a pkg of it. Make sure to either override the LICENSE file variable or to have yours in place on the build machine.
 </string>
     <key>Identifier</key>
     <string>com.github.sheagcraig.pkg.ComicLife3</string>
@@ -11,13 +11,13 @@
     <dict>
         <key>NAME</key>
         <string>ComicLife3</string>
-		<key>LICENSE</key>
-		<string>/Library/Application Support/plasq/Licenses/Comic Life.lic</string>
+        <key>LICENSE</key>
+        <string>/Library/Application Support/plasq/Licenses/Comic Life.lic</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.5</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.download.ComicLife3</string>
+    <string>com.github.sheagcraig.download.ComicLife3</string>
     <key>Process</key>
     <array>
         <dict>
@@ -31,14 +31,14 @@
                 <dict>
                     <key>Applications</key>
                     <string>0775</string>
-					<key>Library</key>
-					<string>01775</string>
-					<key>Library/Application Support/</key>
-					<string>0775</string>
-					<key>Library/Application Support/plasq</key>
-					<string>0775</string>
-					<key>Library/Application Support/plasq/Licenses</key>
-					<string>0777</string>
+                    <key>Library</key>
+                    <string>01775</string>
+                    <key>Library/Application Support/</key>
+                    <string>0775</string>
+                    <key>Library/Application Support/plasq</key>
+                    <string>0775</string>
+                    <key>Library/Application Support/plasq/Licenses</key>
+                    <string>0777</string>
                 </dict>
             </dict>
         </dict>
@@ -62,15 +62,15 @@
             <dict>
                 <key>info_path</key>
                 <string>%pkgroot%/Applications/Comic Life 3.app</string>
-				<key>plist_keys</key>
-				<dict>
-					<key>CFBundleShortVersionString</key>
-					<string>version</string>
-					<key>CFBundleIdentifier</key>
-					<string>bundleid</string>
-					<key>CFBundleName</key>
-					<string>app_name</string>
-				</dict>
+                <key>plist_keys</key>
+                <dict>
+                    <key>CFBundleShortVersionString</key>
+                    <string>version</string>
+                    <key>CFBundleIdentifier</key>
+                    <string>bundleid</string>
+                    <key>CFBundleName</key>
+                    <string>app_name</string>
+                </dict>
             </dict>
         </dict>
         <dict>
@@ -78,10 +78,10 @@
             <string>Copier</string>
             <key>Arguments</key>
             <dict>
-				<key>source_path</key>
-				<string>%LICENSE%</string>
-				<key>destination_path</key>
-				<string>%pkgroot%%LICENSE%</string>
+                <key>source_path</key>
+                <string>%LICENSE%</string>
+                <key>destination_path</key>
+                <string>%pkgroot%%LICENSE%</string>
             </dict>
         </dict>
         <dict>

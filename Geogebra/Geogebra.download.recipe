@@ -24,8 +24,8 @@
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
-				<key>filename</key>
-				<string>Geogebra.zip</string>
+                <key>filename</key>
+                <string>Geogebra.zip</string>
             </dict>
         </dict>
         <dict>

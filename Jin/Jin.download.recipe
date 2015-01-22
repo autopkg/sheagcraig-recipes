@@ -19,7 +19,7 @@
             <key>Processor</key>
             <string>JinURLProvider</string>
         </dict>
-		<dict>
+        <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>

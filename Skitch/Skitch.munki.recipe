@@ -31,9 +31,9 @@
     <key>MinimumVersion</key>
     <string>0.2.0</string>
     <key>ParentRecipe</key>
-	<string>com.github.sheagcraig.download.Skitch</string>
+    <string>com.github.sheagcraig.download.Skitch</string>
     <key>Process</key>
-	<array>
+    <array>
         <dict>
             <key>Processor</key>
             <string>Unarchiver</string>
