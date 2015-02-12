@@ -71,6 +71,14 @@ http://msdn.microsoft.com/en-us/library/ee825488(v=cs.20).aspx for a table of Cu
                 <string>%RECIPE_CACHE_DIR%/%pkg_name%</string>
                 <key>source_flatpkg_dir</key>
                 <string>%RECIPE_CACHE_DIR%/unpacked</string>
+                <!-- This is not a valid input variable for
+                     FlatPkgPacker, but pkg_path is not specified by any
+                     previous processor, and may be needed for child
+                     processors. We can set it here and have it added
+                     to the env.
+                -->
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%pkg_name%</string>
             </dict>
         </dict>
     </array>
