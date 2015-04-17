@@ -48,6 +48,8 @@
                 <string>%RECIPE_CACHE_DIR%/unpacked/NetHack.pkg</string>
                 <key>destination_path</key>
                 <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
+                <key>pkg_path</key>
+                <string>%RECIPE_CACHE_DIR%/%NAME%-%version%.pkg</string>
             </dict>
         </dict>
     </array>
