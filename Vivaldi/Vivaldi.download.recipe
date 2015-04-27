@@ -25,7 +25,7 @@
                 <key>request_headers</key>
                 <dict>
                     <key>User-Agent</key>
-                    <string>Safari 8.0.2</string>
+                    <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17</string>
                 </dict>
                 <key>re_pattern</key>
                 <string>https://vivaldi\.com/download/Vivaldi[0-9TP_.]+\.dmg</string>
