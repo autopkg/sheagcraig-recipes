@@ -83,6 +83,16 @@
                             <key>group</key>
                             <string>admin</string>
                         </dict>
+                        <dict>
+                            <key>path</key>
+                            <string>Applications/eclipse/Eclipse.app/Contents/MacOS/eclipse</string>
+                            <key>user</key>
+                            <string>root</string>
+                            <key>group</key>
+                            <string>admin</string>
+                            <key>mode</key>
+                            <string>755</string>
+                        </dict>
                     </array>
                 </dict>
             </dict>
