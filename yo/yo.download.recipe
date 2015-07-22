@@ -5,7 +5,7 @@
     <key>Description</key>
     <string>Download the current built package of yo.</string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.pkg.yo</string>
+    <string>com.github.sheagcraig.download.yo</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
