@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Download the current built package of yo.</string>
+    <string>Download the current built package of jss_helper.</string>
     <key>Identifier</key>
-    <string>com.github.sheagcraig.download.yo</string>
+    <string>com.github.sheagcraig.download.jss_helper</string>
     <key>Input</key>
     <dict>
         <key>NAME</key>
-        <string>yo</string>
+        <string>jss_helper</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.5.0</string>
@@ -23,14 +23,14 @@
             <key>Arguments</key>
             <dict>
                 <key>github_repo</key>
-                <string>sheagcraig/yo</string>
+                <string>sheagcraig/jss_helper</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Comment</key>
-            <string>Download latest yo package.</string>
+            <string>Download latest jss_helper package.</string>
             <key>Arguments</key>
             <dict />
         </dict>
