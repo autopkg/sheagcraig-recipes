@@ -1,6 +1,6 @@
 #!/bin/bash
 
-PYTHON_JSS="/usr/share/python_jss*.egg"
+PYTHON_JSS="/usr/local/share/python_jss*.egg"
 
 # Install the one that we brought with us:
 easy_install -UZ $PYTHON_JSS

@@ -117,9 +117,11 @@
                     <string>0755</string>
                     <key>usr</key>
                     <string>0755</string>
-                    <key>usr/share</key>
+                    <key>usr/local</key>
                     <string>0755</string>
-                    <key>usr/share/jssimporter</key>
+                    <key>usr/local/share</key>
+                    <string>0755</string>
+                    <key>usr/local/share/jssimporter</key>
                     <string>0755</string>
                 </dict>
             </dict>
@@ -134,7 +136,7 @@
                 <key>source_path</key>
                 <string>%RECIPE_CACHE_DIR%/downloads/python_jss*.egg</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/usr/share/</string>
+                <string>%pkgroot%/usr/local/share/</string>
             </dict>
         </dict>
         <dict>
@@ -162,7 +164,7 @@
                 <key>source_path</key>
                 <string>%jssimporter_path%/example_templates</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/usr/share/jssimporter/</string>
+                <string>%pkgroot%/usr/local/share/jssimporter/</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
@@ -177,7 +179,7 @@
                 <key>source_path</key>
                 <string>%jssimporter_path%/README.md</string>
                 <key>destination_path</key>
-                <string>%pkgroot%/usr/share/jssimporter/README.md</string>
+                <string>%pkgroot%/usr/local/share/jssimporter/README.md</string>
                 <key>overwrite</key>
                 <true/>
             </dict>
