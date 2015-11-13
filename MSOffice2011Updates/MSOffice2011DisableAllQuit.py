@@ -27,10 +27,11 @@ __all__ = ["MSOffice2011DisableAllQuit"]
 
 
 class MSOffice2011DisableAllQuit(Processor):
-    """Overwrites the script at
+    """Disables the all quit pkg in MSOffice 2011 updates.
+
+    Overwrites the script at
     Office2011_all_quit_14.x.x.combo.pkg/Scripts/preinstall with one
     that doesn't kill all of your browsers.
-
     """
     description = __doc__
 
@@ -44,17 +45,14 @@ class MSOffice2011DisableAllQuit(Processor):
     }
 
     def main(self):
-        """Write a blank shell script over the Office all_quit
-        preinstall.
-
-        """
-        installs_array = self.env['additional_pkginfo']['installs']
-        version = installs_array[0]['CFBundleVersion']
-        path = os.path.join(self.env['unpacked_pkg_path'],
-                            'Office2011_all_quit_%s.combo.pkg' % version,
-                            'Scripts/preinstall')
-        with open(path, 'w+') as preinstall:
-            preinstall.write('#!/bin/bash\n\nexit 0')
+        """Write a blank script over the Office all_quit preinstall."""
+        installs_array = self.env["additional_pkginfo"]["installs"]
+        version = installs_array[0]["CFBundleVersion"]
+        path = os.path.join(self.env["unpacked_pkg_path"],
+                            "Office2011_all_quit_%s.combo.pkg" % version,
+                            "Scripts/preinstall")
+        with open(path, "w+") as preinstall:
+            preinstall.write("#!/bin/bash\n\nexit 0")
 
 
 if __name__ == "__main__":
