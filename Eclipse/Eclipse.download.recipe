@@ -10,6 +10,8 @@
     <dict>
         <key>NAME</key>
         <string>Eclipse</string>
+        <key>SELECTION</key>
+        <string>Eclipse IDE for Java Developers</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.0</string>
@@ -17,17 +19,54 @@
     <array>
         <dict>
             <key>Processor</key>
+            <string>OptionSelector</string>
+            <key>Arguments</key>
+            <dict>
+                <key>selection</key>
+                <string>%SELECTION%</string>
+                <key>options</key>
+                <dict>
+                    <!-- Still writing the regexes for all of these! -->
+                    <!-- <key>Eclipse IDE for Java EE Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Spring Tool Suite</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <key>Eclipse IDE for Java Developers</key>
+                    <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string>
+                    <!-- <key>Eclipse IDE for C/C++ Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse IDE for Eclipse Committers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse for PHP Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse IDE for Java and DSL Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse for RCP and RAP Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse IDE for Automotive Software Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse Modeling Tools</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse IDE for Java and Report Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse IDE for Parallel Application Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse for Testers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                    <!-- <key>Eclipse for Scout Developers</key> -->
+                    <!-- <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string> -->
+                </dict>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>URLTextSearcher</string>
             <key>Arguments</key>
             <dict>
                 <key>url</key>
                 <string>https://eclipse.org/downloads/</string>
-                <!-- Example: https://eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-jee-mars-1-macosx-cocoa-x86_64.tar.gz -->
-                <!-- https://eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/mars/1/eclipse-java-mars-1-macosx-cocoa-x86_64.tar.gz -->
-                <!--    href="download\.php\?file=([/\w\d]*/eclipse-java-\w+-\d+-macosx-cocoa-x86_64\.tar\.gz)" title="Download"&gt;64 bit&lt;/a&gt;.*$</string> -->
-                <!--    href="download .php ?file=/technology/epp/downloads/release/mars/1/eclipse-java-mars-1-macosx-cocoa-x86_64.tar.gz" title="Download">64 bit</a> -->
                 <key>re_pattern</key>
-                <string>href="download\.php\?file=([/\w]+eclipse-java[\w-]+macosx-cocoa-x86_64\.tar\.gz)"</string>
+                <string>%selection%</string>
                 <key>result_output_var_name</key>
                 <string>match</string>
                 <key>request_headers</key>
