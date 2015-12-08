@@ -36,7 +36,7 @@
                 <key>url</key>
                 <string>http://sourceforge.net/projects/nethack/files/nethack/%version_match%</string>
                 <key>re_pattern</key>
-                <string>http://sourceforge.net/projects/nethack/files/nethack/[0-9.]{5}/NetHack-[0-9]+-Lion-mac-Term.*dmg/download</string>
+                <string>http://sourceforge.net/projects/nethack/files/nethack/[0-9.]{5}/NetHack-[0-9]+-mac-Term.*pkg/download</string>
                 <!-- Example http://sourceforge.net/projects/nethack/files/nethack/3.4.3/NetHack-343-Lion-mac-Term-1.dmg/download -->
                 <key>result_output_var_name</key>
                 <string>dl_match</string>
@@ -50,7 +50,7 @@
                 <key>url</key>
                 <string>%dl_match%</string>
                 <key>filename</key>
-                <string>NetHack.dmg</string>
+                <string>NetHack.pkg</string>
             </dict>
         </dict>
         <dict>
