@@ -28,7 +28,7 @@
                     <string>Mozilla/5.0 (Macintosh; Intel Mac OS X 10_10_0) AppleWebKit/600.5.17 (KHTML, like Gecko) Version/8.0.5 Safari/600.5.17</string>
                 </dict>
                 <key>re_pattern</key>
-                <string>https://download.vivaldi\.com/stable/Vivaldi[0-9TP_.]+\.dmg</string>
+                <string>https://downloads.vivaldi\.com/stable/Vivaldi[0-9TP_.]+\.dmg</string>
                 <!-- Example: "http://vivaldi.com/download/Vivaldi_TP_1.0.83.38.dmg" -->
                 <key>result_output_var_name</key>
                 <string>match</string>
