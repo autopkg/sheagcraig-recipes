@@ -12,7 +12,7 @@
         <string>VirtualBox</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.9</string>
+    <string>0.6.0</string>
     <key>Process</key>
     <array>
         <dict>
@@ -34,11 +34,28 @@
             <dict>
                 <key>url</key>
                 <string>%match%</string>
+                <key>filename</key>
+                <string>%NAME%.dmg</string>
             </dict>
         </dict>
         <dict>
             <key>Processor</key>
             <string>EndOfCheckPhase</string>
+        </dict>
+        <dict>
+          <key>Processor</key>
+          <string>CodeSignatureVerifier</string>
+          <key>Arguments</key>
+          <dict>
+            <key>input_path</key>
+            <string>%pathname%/%NAME%.pkg</string>
+            <key>expected_authority_names</key>
+            <array>
+              <string>Developer ID Installer: Oracle America, Inc.</string>
+              <string>Developer ID Certification Authority</string>
+              <string>Apple Root CA</string>
+            </array>
+          </dict>
         </dict>
     </array>
 </dict>
