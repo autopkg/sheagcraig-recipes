@@ -3,7 +3,9 @@
 <plist version="1.0">
 <dict>
     <key>Description</key>
-    <string>Downloads the current release version of Jin</string>
+    <string>Downloads the current release version of Jin
+    Note: Code signature verification for Jin probably cannot be done at this time. It doesn't appear to be using version 2
+    or even version 1: Sealed Resources=none</string>
     <key>Identifier</key>
     <string>com.github.sheagcraig.download.Jin</string>
     <key>Input</key>
