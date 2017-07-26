@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://gsp5.s3.amazonaws.com/GSP5.dmg</string>
+                <string>https://gsp5.s3.amazonaws.com/GSP5.dmg</string>
             </dict>
         </dict>
         <dict>
