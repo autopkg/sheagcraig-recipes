@@ -41,7 +41,7 @@
                 <key>overwrite</key>
                 <true/>
                 <key>destination_path</key>
-                <string>%pkgroot%/Applications</string>
+                <string>%pkgroot%/Applications/Eclipse.app</string>
                 <key>source_path</key>
                 <string>%pathname%/Eclipse.app</string>
             </dict>
