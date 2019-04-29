@@ -25,7 +25,7 @@ __all__ = ["AirServerURLProvider"]
 
 BASE_URL = "http://www.airserver.com/Download/MacPC"
 # REFERENCE <a class="button download" href="http://dl.airserver.com/mac/AirServer-5.0.6.dmg"><i class="icon-download-cloud"></i> Download for Mac</a>
-re_dmg_link = re.compile(r'href="(?P<url>http://dl.airserver.com/mac/AirServer-[\d.]+.dmg)"')
+re_dmg_link = re.compile(r'href="(?P<url>http://dl.airserver.com/mac/AirServer-[\d.]+(-\d*)+.dmg)"')
 
 
 class AirServerURLProvider(Processor):
