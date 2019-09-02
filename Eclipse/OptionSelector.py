@@ -16,8 +16,6 @@
 """See docstring for OptionSelector class"""
 
 from __future__ import absolute_import
-import re
-import urllib2
 
 from autopkglib import Processor, ProcessorError
 

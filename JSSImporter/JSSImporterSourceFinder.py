@@ -16,11 +16,11 @@
 
 
 from __future__ import absolute_import
-import os
+
 import glob
+import os
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["JSSImporterSourceFinder"]
 

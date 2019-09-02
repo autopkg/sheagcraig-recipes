@@ -15,10 +15,10 @@
 # limitations under the License.
 
 from __future__ import absolute_import
+
 import urllib2
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["GeogebraURLProvider"] 
 
