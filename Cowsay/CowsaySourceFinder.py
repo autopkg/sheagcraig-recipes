@@ -61,7 +61,7 @@ class CowsaySourceFinder(Processor):
         """Grabs the version from the cowsay perl file."""
 
         with open(filename, 'r') as f:
-            match = re.search('\$version = "([0-9.]+)', f.read())
+            match = re.search(r'\$version = "([0-9.]+)', f.read())
         self.env["version"] = match.group(1)
 
     def replace_text(self, filename, replacement_code, replacement):
