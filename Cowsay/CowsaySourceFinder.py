@@ -91,7 +91,7 @@ class CowsaySourceFinder(Processor):
             self.output("Set cows folder default.")
             self.output("Found %s" % self.env["cowsay_path"])
             self.output("Found version is %s" % self.env["version"])
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError(err)
 
 

@@ -61,7 +61,7 @@ class JSSImporterSourceFinder(Processor):
             self.env["jssimporter_path"] = os.path.join(root_dir,
                                                               autopkg_dir)
             self.output("Found %s" % self.env["jssimporter_path"])
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError(err)
 
 

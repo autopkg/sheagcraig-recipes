@@ -47,7 +47,7 @@ class GeogebraURLProvider(Processor):
             f = urllib2.urlopen(base_url)
             html = f.geturl()
             f.close()
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError("Can't download %s: %s" % (base_url, err))
         
         return urllib2.quote(f.geturl(), safe=":/%")

@@ -52,7 +52,7 @@ class NetHackVersioner(Processor):
         else:
             self.env["version"] = "0.0.0"
             self.output("No version found!")
-        # except BaseException as err:
+        # except Exception as err:
         #     raise ProcessorError(err)
 
 

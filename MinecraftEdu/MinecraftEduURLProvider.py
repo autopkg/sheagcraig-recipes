@@ -74,7 +74,7 @@ class MinecraftEduURLProvider(Processor):
             url_handle = urllib2.urlopen(request)
             version_output = url_handle.read()
             url_handle.close()
-        except BaseException as e:
+        except Exception as e:
             raise ProcessorError("Can't open %s: %s" % (base_url, e))
         releases = filter(lambda x: dl_type in x,version_output.split("<version>"))
         version_numbers = []

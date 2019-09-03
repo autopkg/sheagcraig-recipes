@@ -50,7 +50,7 @@ class JinURLProvider(Processor):
             f = urllib2.urlopen(base_url)
             html = f.read()
             f.close()
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError("Can't download %s: %s" % (base_url, err))
         
         m = re_dmg_link.search(html)
