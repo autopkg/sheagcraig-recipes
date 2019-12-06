@@ -15,11 +15,12 @@
 # limitations under the License.
 
 
-import os
+from __future__ import absolute_import
+
 import glob
+import os
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["JSSImporterSourceFinder"]
 
@@ -60,7 +61,7 @@ class JSSImporterSourceFinder(Processor):
             self.env["jssimporter_path"] = os.path.join(root_dir,
                                                               autopkg_dir)
             self.output("Found %s" % self.env["jssimporter_path"])
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError(err)
 
 

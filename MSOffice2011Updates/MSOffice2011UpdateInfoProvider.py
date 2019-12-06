@@ -15,14 +15,14 @@
 # limitations under the License.
 """See docstring for MSOffice2011UpdateInfoProvider class"""
 
+from __future__ import absolute_import
+
 import plistlib
 import urllib2
-
 from distutils.version import LooseVersion
 from operator import itemgetter
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["MSOffice2011UpdateInfoProvider"]
 
@@ -158,6 +158,13 @@ class MSOffice2011UpdateInfoProvider(Processor):
     def value_to_os_version_string(self, value):
         """Converts a value to an OS X version number"""
         #pylint: disable=no-self-use
+
+        # Map string type for both Python 2 and Python 3.
+        try:
+            _ = basestring
+        except NameError:
+            basestring = str  # pylint: disable=W0622
+
         if isinstance(value, int):
             version_str = hex(value)[2:]
         elif isinstance(value, basestring):
@@ -204,7 +211,7 @@ class MSOffice2011UpdateInfoProvider(Processor):
             fref = urllib2.urlopen(req)
             data = fref.read()
             fref.close()
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError("Can't download %s: %s" % (base_url, err))
 
         metadata = plistlib.readPlistFromString(data)

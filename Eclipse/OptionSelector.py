@@ -15,8 +15,7 @@
 # limitations under the License.
 """See docstring for OptionSelector class"""
 
-import re
-import urllib2
+from __future__ import absolute_import
 
 from autopkglib import Processor, ProcessorError
 

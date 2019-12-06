@@ -14,10 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import absolute_import
+
 import urllib2
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["GeogebraURLProvider"] 
 
@@ -46,7 +47,7 @@ class GeogebraURLProvider(Processor):
             f = urllib2.urlopen(base_url)
             html = f.geturl()
             f.close()
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError("Can't download %s: %s" % (base_url, err))
         
         return urllib2.quote(f.geturl(), safe=":/%")

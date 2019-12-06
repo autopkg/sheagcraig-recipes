@@ -14,11 +14,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+from __future__ import absolute_import
+
 import re
 import urllib2
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["JinURLProvider"] 
 
@@ -49,7 +50,7 @@ class JinURLProvider(Processor):
             f = urllib2.urlopen(base_url)
             html = f.read()
             f.close()
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError("Can't download %s: %s" % (base_url, err))
         
         m = re_dmg_link.search(html)

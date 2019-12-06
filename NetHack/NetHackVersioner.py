@@ -15,10 +15,11 @@
 # limitations under the License.
 
 
+from __future__ import absolute_import
+
 import re
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["NetHackVersioner"]
 
@@ -43,7 +44,7 @@ class NetHackVersioner(Processor):
         with open(self.env["input_path"], "rb") as nethack:
             nethack_data = nethack.read()
 
-        regex = re.compile("MacOSX NetHack Version ([\d+\.]{3,})")
+        regex = re.compile(r"MacOSX NetHack Version ([\d+\.]{3,})")
         found = re.search(regex, nethack_data)
         if found:
             self.env["version"] = found.group(1)
@@ -51,7 +52,7 @@ class NetHackVersioner(Processor):
         else:
             self.env["version"] = "0.0.0"
             self.output("No version found!")
-        # except BaseException as err:
+        # except Exception as err:
         #     raise ProcessorError(err)
 
 

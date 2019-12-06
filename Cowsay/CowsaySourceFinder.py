@@ -15,12 +15,13 @@
 # limitations under the License.
 
 
+from __future__ import absolute_import
+
 import glob
 import os
 import re
 
 from autopkglib import Processor, ProcessorError
-
 
 __all__ = ["CowsaySourceFinder"]
 
@@ -60,7 +61,7 @@ class CowsaySourceFinder(Processor):
         """Grabs the version from the cowsay perl file."""
 
         with open(filename, 'r') as f:
-            match = re.search('\$version = "([0-9.]+)', f.read())
+            match = re.search(r'\$version = "([0-9.]+)', f.read())
         self.env["version"] = match.group(1)
 
     def replace_text(self, filename, replacement_code, replacement):
@@ -90,7 +91,7 @@ class CowsaySourceFinder(Processor):
             self.output("Set cows folder default.")
             self.output("Found %s" % self.env["cowsay_path"])
             self.output("Found version is %s" % self.env["version"])
-        except BaseException as err:
+        except Exception as err:
             raise ProcessorError(err)
 
 
