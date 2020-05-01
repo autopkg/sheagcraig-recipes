@@ -10,33 +10,20 @@
     <dict>
         <key>NAME</key>
         <string>AirServer</string>
-        <key>BASEURL</key>
-        <string>https://www.airserver.com/Download/MacPC</string>
-        <key>RE_PATTERN</key>
-        <string>(http.*airserver.*dmg)</string>
+        <key>DOWNLOAD_URL</key>
+        <string>https://www.airserver.com/download/mac/latest</string>
     </dict>
     <key>MinimumVersion</key>
     <string>0.2.9</string>
     <key>Process</key>
     <array>
         <dict>
-            <key>Arguments</key>
-            <dict>
-                <key>url</key>
-                <string>%BASEURL%</string>
-                <key>re_pattern</key>
-                <string>%RE_PATTERN%</string>
-                <key>result_output_var_name</key>
-                <string>url</string>
-            </dict>
-            <key>Processor</key>
-            <string>URLTextSearcher</string>
-        </dict>
-        <dict>
             <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>
+                <key>url</key>
+                <string>%DOWNLOAD_URL%</string>
                 <key>filename</key>
                 <string>%NAME%.dmg</string>
             </dict>
