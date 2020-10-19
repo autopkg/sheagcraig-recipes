@@ -21,9 +21,9 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.greenfoot.org/download</string>
+                <string>https://www.greenfoot.org/download</string>
                 <key>re_pattern</key>
-                <string>http://www.greenfoot.org/download/files/Greenfoot-mac-[\S]+.zip</string>
+                <string>https://www.greenfoot.org/download/files/Greenfoot-mac-[\S]+.zip</string>
             </dict>
         </dict>
         <dict>
