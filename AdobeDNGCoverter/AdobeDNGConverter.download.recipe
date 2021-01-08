@@ -21,7 +21,7 @@
             <key>Arguments</key>
             <dict>
                 <key>url</key>
-                <string>http://www.adobe.com/go/dng_converter_mac/</string>
+                <string>https://www.adobe.com/go/dng_converter_mac/</string>
                 <key>re_pattern</key>
                 <string>(?P&lt;part1&gt;thankyou.jsp\?ftpID=[0-9]+?)&amp;amp;(?P&lt;part2&gt;fileID=[0-9]+)</string>
                 <!-- Example: 

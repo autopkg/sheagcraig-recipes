@@ -23,7 +23,7 @@
                 <key>re_pattern</key>
                 <string>href="(?P&lt;url&gt;http://sourceforge\.net/projects/jin/files/jin/jin-(?P&lt;version&gt;[\d\.]+)/jin-[\d\.]+-macosx-lion.dmg/download)"</string>
                 <key>url</key>
-                <string>http://www.jinchess.com/osx_download</string>
+                <string>https://www.jinchess.com/osx_download</string>
             </dict>
             <key>Processor</key>
             <string>URLTextSearcher</string>
