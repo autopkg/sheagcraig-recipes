@@ -39,7 +39,7 @@
             <dict>
                 <key>input_path</key>
                 <string>%pathname%/AirServer.app</string>
-                <key>requirements</key>
+                <key>requirement</key>
                 <string>anchor apple generic and certificate leaf[subject.OU] = "6C755KS5W3"</string>
             </dict>
         </dict>
