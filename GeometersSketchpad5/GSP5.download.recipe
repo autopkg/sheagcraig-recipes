@@ -17,6 +17,21 @@
     <array>
         <dict>
             <key>Processor</key>
+            <string>DeprecationWarning</string>
+            <key>Arguments</key>
+            <dict>
+                <key>warning_message</key>
+                <string>The sheagcraig-recipes repository is deprecated.
+Details: https://github.com/autopkg/sheagcraig-recipes/issues/71
+
+Copies of these recipes have been created in the homebysix-recipes repo:
+- GSP5.download
+- GSP5.pkg
+                </string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>URLDownloader</string>
             <key>Arguments</key>
             <dict>

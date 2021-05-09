@@ -19,6 +19,23 @@
     <array>
         <dict>
             <key>Processor</key>
+            <string>DeprecationWarning</string>
+            <key>Arguments</key>
+            <dict>
+                <key>warning_message</key>
+                <string>The sheagcraig-recipes repository is deprecated.
+Details: https://github.com/autopkg/sheagcraig-recipes/issues/71
+
+Copies of these recipes have been created in the homebysix-recipes repo:
+- Eclipse.download
+- Eclipse.install
+- Eclipse.munki
+- Eclipse.pkg
+                </string>
+            </dict>
+        </dict>
+        <dict>
+            <key>Processor</key>
             <string>OptionSelector</string>
             <key>Arguments</key>
             <dict>
