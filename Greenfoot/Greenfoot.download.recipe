@@ -12,9 +12,24 @@
         <string>Greenfoot</string>
     </dict>
     <key>MinimumVersion</key>
-    <string>0.2.9</string>
+    <string>1.1</string>
     <key>Process</key>
     <array>
+        <dict>
+            <key>Processor</key>
+            <string>DeprecationWarning</string>
+            <key>Arguments</key>
+            <dict>
+                <key>warning_message</key>
+                <string>The sheagcraig-recipes repository is deprecated.
+Details: https://github.com/autopkg/sheagcraig-recipes/issues/71
+
+Copies of these recipes have been created in the homebysix-recipes repo:
+- Greenfoot.download
+- Greenfoot.pkg
+                </string>
+            </dict>
+        </dict>
         <dict>
             <key>Processor</key>
             <string>URLTextSearcher</string>
