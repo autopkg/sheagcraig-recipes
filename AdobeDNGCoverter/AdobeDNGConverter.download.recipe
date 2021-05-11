@@ -21,7 +21,13 @@
             <key>Arguments</key>
             <dict>
                 <key>warning_message</key>
-                <string>AdobeDNGConverter is behind a sign-in page as of May 2021. This recipe will no longer be updated, and will be removed in the future.</string>
+                <string>The sheagcraig-recipes repository is deprecated.
+Details: https://github.com/autopkg/sheagcraig-recipes/issues/71
+
+Copies of these recipes have been created in the homebysix-recipes repo:
+- AdobeDNGConverter.download
+- AdobeDNGConverter.pkg
+                </string>
             </dict>
         </dict>
         <dict>
