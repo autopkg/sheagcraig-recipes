@@ -1,7 +1,0 @@
-#!/bin/bash
-
-if [[ -d "/Library/Application Support/minecraftedu" ]]; then
-	rm -rf "/Library/Application Support/minecraftedu"
-fi
-
-exit 0
